@@ -7,6 +7,7 @@ import connectDB from './config/db.js'
 
 //Roues files
 import auth from './routes/auth.js'
+import invoice from './routes/invoice.js'
 
 dotenv.config()
 
@@ -25,6 +26,7 @@ app.use(cookieParser())
 //Mount Routers
 
 app.use('/api/v1/auth', auth)
+app.use('/api/v1/invoice', invoice)
 
 
 const PORT = process.env.PORT || 4000

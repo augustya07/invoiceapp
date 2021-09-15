@@ -26,7 +26,6 @@ const listInvoice = asyncHandler(async (req, res) => {
 const getInvoice = asyncHandler(async (req, res) => {
 
     const invoice = await Invoice.findById(req.params.id)
-
     if (invoice) {
         res.json(invoice)
     } else {

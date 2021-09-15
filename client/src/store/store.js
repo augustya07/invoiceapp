@@ -1,10 +1,15 @@
 import {createStore, combineReducers, applyMiddleware} from "redux";
 import thunk from "redux-thunk";
 import {composeWithDevTools} from "redux-devtools-extension";
+import {InvoiceDetailsReducer, InvoiceListReducer} from "./reducers/InvoiceReducer";
 
-const reducer = combineReducers({})
 
-const initialState = { }
+const reducer = combineReducers({
+    InvoiceList: InvoiceListReducer,
+    InvoiceDetails: InvoiceDetailsReducer
+})
+
+const initialState = {}
 
 
 const middleware = [thunk]

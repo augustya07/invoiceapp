@@ -5,15 +5,17 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {Provider} from "react-redux";
 import store from "./store/store";
+import axios from 'axios';
+
+axios.defaults.baseURL = 'http://127.0.0.1:4000/api/v1';
 
 ReactDOM.render(
-
-  <React.StrictMode>
-      <Provider store={store}>
-    <App />
-      </Provider>
-  </React.StrictMode>,
-  document.getElementById('root')
+    <React.StrictMode>
+        <Provider store={store}>
+            <App/>
+        </Provider>
+    </React.StrictMode>,
+    document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function

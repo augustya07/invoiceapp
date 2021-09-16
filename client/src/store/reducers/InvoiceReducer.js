@@ -30,12 +30,12 @@ export const InvoiceListReducer = (state = {invoice: []}, action) => {
 }
 
 
-export const InvoiceDetailsReducer = (state = {invoice: []}, action) => {
-    switch (action.type) {
+export const InvoiceDetailsReducer = (state = { loading: true, invoice: [] }, action) => {
+        switch (action.type) {
         case INVOICE_DETAILS_REQUEST:
             return {
                 ...state,
-                loading: true, invoice: []
+                loading: true,invoice:[ ]
             }
         case INVOICE_DETAILS_SUCCESS:
             return {
@@ -52,7 +52,5 @@ export const InvoiceDetailsReducer = (state = {invoice: []}, action) => {
         default:
             return state
 
-
     }
-
 }

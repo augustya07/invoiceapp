@@ -14,7 +14,8 @@ const InvoiceCollection = () => {
 
     useEffect(() => {
         dispatch(listInvoice())
-        // console.log(invoice)
+
+        console.log(invoice)
     }, [dispatch])
 
 

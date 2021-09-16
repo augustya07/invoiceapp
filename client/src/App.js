@@ -9,6 +9,7 @@ const App = () => {
             <GlobalStyle/>
             <Route path='/' component={HomeScreen} exact />
             <Route path='/invoice/:id' component={InvoiceScreen} exact />
+
         </Router>
     );
 }

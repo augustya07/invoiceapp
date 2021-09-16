@@ -14,7 +14,7 @@ const InvoiceScreen = ({match}) => {
         if (!invoice._id || invoice._id !== match.params.id)
             dispatch(listInvoiceDetails(match.params.id))
         console.log(invoice)
-    }, [dispatch,match])
+    }, [dispatch])
 
     return (
         <>
@@ -28,11 +28,6 @@ const InvoiceScreen = ({match}) => {
                     <p>{invoice._id}</p>
                     {/*{invoice._id === match.params.id ? dispatch(listInvoiceDetails(match.params.id)) : <p> error </p>}*/}
                     <p>{invoice.senderAddress.city}</p>
-                    <p>{invoice.senderAddress.street}</p>
-                    <p>{invoice.senderAddress.postCode}</p>
-                    <p>{invoice.senderAddress.country}</p>
-
-                    
 
 
                 </>
@@ -55,4 +50,4 @@ const InvoiceScreen = ({match}) => {
     )
 }
 
-export default InvoiceScreen
+// export default InvoiceScreen

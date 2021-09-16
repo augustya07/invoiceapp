@@ -12,11 +12,20 @@ const InvoiceScreen = ({match}) => {
     useEffect(() => {
         dispatch(listInvoiceDetails(match.params.id))
         console.log(invoice)
-    }, [dispatch,])
+    }, [dispatch,match])
 
     return (
         <>
-            <h1> {invoice.clientName} </h1>
+
+            <p>{invoice._id}</p>
+            {/*<p>{invoice.senderAddress}</p>*/}
+
+
+
+            {invoice.senderAddress.map((item, index) => (
+                <p> {item.street} </p>
+            ))}
+
         </>
     )
 }

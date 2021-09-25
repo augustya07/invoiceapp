@@ -9,7 +9,7 @@ export const StyledInvoices = styled.div`
   height:72px;
   border-radius: 8px;
   padding: 0 30px;
-  box-shadow: 0px 10px 10px -10px rgba(72, 84, 159, 0.100397);
+  box-shadow: 0 10px 10px -10px rgba(72, 84, 159, 0.100397);
   margin-bottom: 30px;
 
   .price {

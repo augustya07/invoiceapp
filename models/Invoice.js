@@ -39,6 +39,12 @@ const InvoiceSchema = mongoose.Schema(
             postCode: {type: String, required: true},
             country: {type: String, required: true}
         },
+        clientAddress: {
+            street: {type: String, required: true},
+            city: {type: String, required: true},
+            postCode: {type: String, required: true},
+            country: {type: String, required: true}
+        },
         items: [
             {
                 name: {type: 'String', required: true},

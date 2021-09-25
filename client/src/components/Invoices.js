@@ -27,6 +27,16 @@ const Invoices = ({invoice}) => {
                     {invoice.status}
                 </div>
 
+                {/*<div className="">*/}
+                {/*    {invoice.clientAddress.map((item,index) => (*/}
+                {/*        <p> {item.street}</p>*/}
+                {/*    ))}*/}
+                {/*</div>*/}
+
+                {/*<div className="">*/}
+                {/*    {invoice.clientAddress.street}*/}
+                {/*</div>*/}
+
                 <Link to={`/invoice/${invoice._id}`}>
                     <div className="">
                         Button
